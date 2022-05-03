@@ -78,7 +78,7 @@ function generateTitleLinks(customSelector = ''){
   titleList.innerHTML = html;
   
   const links = document.querySelectorAll('.titles a');
-
+  console.log('what is it?')
   for(let link of links){
   link.addEventListener('click', titleClickHandler);
   console.log(link);
