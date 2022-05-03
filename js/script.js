@@ -47,7 +47,7 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles';
 
 function generateTitleLinks(customSelector = ''){
-  console.log('Title Lists are just generated')
+  console.log('Title Lists are just generated');
 
   /* [DONE] remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
@@ -68,7 +68,7 @@ function generateTitleLinks(customSelector = ''){
 
     /* create HTML of the link */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log('HTML of link was created!')
+    console.log('HTML of link was created!');
 
     /* insert link into titleList */
     html = html + linkHTML;
@@ -77,11 +77,11 @@ function generateTitleLinks(customSelector = ''){
 
   titleList.innerHTML = html;
   
-  const links = document.querySelectorAll('.titles a');
-  console.log('what is it?')
+  const links = document.querySelectorAll('.tnpm run test:jsitles a');
+  console.log('what is it?');
   for(let link of links){
-  link.addEventListener('click', titleClickHandler);
-  console.log(link);
+    link.addEventListener('click', titleClickHandler);
+    console.log(link);
   }
 }
 
