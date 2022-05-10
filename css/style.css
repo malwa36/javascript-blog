@@ -99,6 +99,7 @@ body {
 
 .post-tags {
   display: flex;
+  margin: 0 20px 0 0;
 }
 .post-tags p {
   margin: 0 10px 0 0;
