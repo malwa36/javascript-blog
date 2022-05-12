@@ -286,7 +286,7 @@ addClickListenersToTags();
 
 function generateAuthors (){
 	
-	let allSideAuthors = {};
+	let allSideAuthors = { };
 	
 	/* find all articles */
 	const articles = document.querySelectorAll(optArticleSelector);
@@ -417,3 +417,22 @@ generateTitleLinks('[data-author="' + author + '"]');
 
   }
 
+function addClickListenersToAuthors(){
+  /* [DONE] find all links to authors */
+
+  const allAuthorsLinks = document.querySelectorAll('a[href^="#author-"]');
+
+  /* [DONE] START LOOP: for each link */
+
+  for(let allAuthorsLink of allAuthorsLinks){
+
+    /* [DONE]add tagClickHandler as event listener for that link */
+
+    allAuthorsLink.addEventListener('click', authorClickHandler);
+
+  /* [DONE] END LOOP: for each link */
+  }
+
+}
+
+addClickListenersToAuthors();
