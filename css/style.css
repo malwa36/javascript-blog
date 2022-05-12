@@ -105,15 +105,15 @@ body {
   margin: 0 10px 0 0;
 }
 
-.post-tags ul {
-	margin: 0 20px;
+.post-tags ul span {
+	margin: 0 5px;
 }
 
 /* Tags */
 
 .tag-size-1 {
   font-size: 14px;
-  color: lightblue;
+  color: blue;
 }
 
 .tag-size-3 {

@@ -6,6 +6,7 @@ const optArticleSelector = '.post',
   optArticleTagsSelector = '.post-tags .list',
   optArticleAuthorSelector = '.post-author',
   optTagsListSelector = '.tags.list',
+  optAuthorsListSelector = '.authors.list',
   optCloudClassCount = 5,
   optCloudClassCountPrefix = 'tag-size-'
 
@@ -285,6 +286,8 @@ addClickListenersToTags();
 
 function generateAuthors (){
 	
+	let allSideAuthors = {};
+	
 	/* find all articles */
 	const articles = document.querySelectorAll(optArticleSelector);
 	console.log(articles);
@@ -316,6 +319,12 @@ function generateAuthors (){
       html = html + linkHTMLData;
       console.log(html);
     
+	  if(!allSideAuthors.hasOwnProperty(articleAuthor)){
+      	allSideAuthors[articleAuthor] = 1;
+    	} else {
+      	allSideAuthors[articleAuthor]++;
+    	}		
+
       /* [DONE] insert HTML of all the links into the author wrapper */
     
       authorWrapper.innerHTML = html;
