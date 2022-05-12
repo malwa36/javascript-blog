@@ -352,7 +352,6 @@ function generateAuthors (){
      /* [NEW] add html from allSideAuthorsHTML to authorRightList */
 
   authorRightList.innerHTML = allSideAuthorsHTML;
-  console.log(allSideAuthorsData);
 }
 
 generateAuthors();
