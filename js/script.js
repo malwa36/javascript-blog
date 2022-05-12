@@ -331,6 +331,28 @@ function generateAuthors (){
     
       /* [DONE] END LOOP: for every article: */
     }
+	
+	/* [NEW] find list of authors in right column */
+
+  const authorRightList = document.querySelector(optAuthorsListSelector);
+  
+  /* [NEW] create variable for all links HTML code */
+
+  let allSideAuthorsHTML = '';
+  
+  /* [NEW] START LOOP: for each author in allSideAuthors */
+
+  for(let articleAuthor in allSideAuthors){
+    /* [NEW] generate code of a link and add it to allSideAuthorsHTML */
+
+    allSideAuthorsHTML += `<li><a href="#author-${articleAuthor}">${articleAuthor} ( ${allSideAuthors[articleAuthor]} )</a></li>`;
+
+  }
+  
+     /* [NEW] add html from allSideAuthorsHTML to authorRightList */
+
+  authorRightList.innerHTML = allSideAuthorsHTML;
+  console.log(allSideAuthorsData);
 }
 
 generateAuthors();
