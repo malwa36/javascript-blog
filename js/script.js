@@ -334,11 +334,11 @@ function generateAuthors (){
       /* [DONE] generate HTML of the link */
     
       // const linkHTMLData = '<a href="#author-'+ articleAuthor +'">' + 'by ' + articleAuthor +'</a>';
-    	const linkHTMLData = {id: articleAuthor, title: articleAuthor};
-		const linkHTML = templates.authorLink(linkHTMLData);
+    	const linkHTMLData = {id: 'author-' + articleAuthor, title: articleAuthor};
+		const authorlinkHTMLTemplate = templates.authorLink(linkHTMLData);
       /* [DONE] add generated code to html variable */
     
-      html = html + linkHTMLData;
+      html = html + authorlinkHTMLTemplate;
       console.log(html);
     
 	  if(!allSideAuthors.hasOwnProperty(articleAuthor)){
