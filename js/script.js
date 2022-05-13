@@ -2,8 +2,8 @@
 
 const templates = {
   articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
-  articleTagsLink: Handlebars.compile(document.querySelector('#template-article-tags-link').innerHTML)
-  
+  articleTagsLink: Handlebars.compile(document.querySelector('#template-article-tags-link').innerHTML),
+  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML)
 }
 
 const optArticleSelector = '.post',
@@ -323,8 +323,9 @@ function generateAuthors (){
     
       /* [DONE] generate HTML of the link */
     
-      const linkHTMLData = '<a href="#author-'+ articleAuthor +'">' + 'by ' + articleAuthor +'</a>';
-    
+      // const linkHTMLData = '<a href="#author-'+ articleAuthor +'">' + 'by ' + articleAuthor +'</a>';
+    	const linkHTMLData = {id: articleAuthor, title: articleAuthor};
+		const linkHTML = templates.authorLink(linkHTMLData);
       /* [DONE] add generated code to html variable */
     
       html = html + linkHTMLData;
